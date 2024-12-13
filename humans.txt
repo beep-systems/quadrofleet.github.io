@@ -1,0 +1,9 @@
+/* TEAM */
+Developer: Beep Systems
+Contact: quadrofleet@gmail.com
+Website: https://quadrofleet.com
+
+/* SITE */
+Standards: HTML5, CSS3, JS
+Technologies: Raspberry Pi, CRSF, VPN
+Last Update: 2024-12-12

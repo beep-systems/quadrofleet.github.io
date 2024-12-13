@@ -1,0 +1,20 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /temp/
+Disallow: /scripts/
+Disallow: /test/
+Disallow: /drafts/
+Disallow: /backup/
+Disallow: /js/
+Disallow: /css/
+
+Allow: /images/
+Allow: /#about
+Allow: /#gallery
+Allow: /#manual
+Allow: /#faq
+Allow: /#support
+
+Sitemap: https://quadrofleet.com/sitemap.xml
