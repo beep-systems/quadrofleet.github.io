@@ -2133,6 +2133,25 @@ blockquote {
     #header aside {
         display: none;
     }
+
+    .qr-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btc-address {
+        text-align: center;
+    }
+
+    #landing-footer .row {
+        justify-content: center;
+        display: flex;
+    }
+
+    #copyright {
+        text-align: center;
+        margin: 0;
+    }
 }
 
 /* Landscape mobile & down
