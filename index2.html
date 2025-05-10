@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>QuadroFleet - Drone Control Over 4G Networks</title>
+
+    <meta name="keywords"
+          content="QuadroFleet, drone, FPV, CRSF, Crossfire, 4G, remote, mobile, VPN, OpenVPN, low-latency, UDP, H.264, camera, control, gamepad, XBOX, PlayStation, computer, PC, sim card, cellular network, long range">
+    <meta name="description"
+          content="QuadroFleet is an advanced system designed for low-latency drone control and FPV streaming over 4G networks. Leveraging the CRSF (Crossfire) protocol, it ensures precise communication with flight controllers. The system supports gamepad-based operation using XBOX or PlayStation controllers, offering a seamless and intuitive control experience. QuadroFleet uses VPN (OpenVPN) for secure remote connections, UDP for efficient data transmission, and H.264 for video streaming from onboard cameras. Designed for reliability and performance, it’s perfect for long-distance drone operations">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+
+    <link rel="shortcut icon" href="images/favicon.ico" title="Favicon"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <meta property="og:title" content="QuadroFleet - Drone Control Over 4G Networks">
+    <meta property="og:description" content="Low-latency drone control and FPV streaming with CRSF and 4G technology.">
+    <meta property="og:image" content="https://quadrofleet.com/images/logo.svg">
+    <meta property="og:url" content="https://quadrofleet.com">
+    <meta property="og:type" content="website">
+</head>
+<body>
+
+<div id="preloader">
+    <div id="status" class="la-ball-triangle-path">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
+    <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
+    <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
+    <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
+</div>
+
+<div id="wrapper">
+
+    <header id="home" class="scrollto clearfix" data-enllax-ratio=".5">
+        <div id="header" class="nav-collapse">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <div id="logo">
+                        <img src="images/logo.svg" id="banner-logo" alt="QuadroFleet Drone Control Logo"/>
+                        <img src="images/logo.svg" id="navigation-logo" alt="QuadroFleet Drone Control Logo"/>
+                    </div>
+
+                    <aside>
+                        <ul class="social-icons">
+                            <li>
+                                <a target="_blank" title="GitHub" href="https://github.com/beep-systems/quadrofleet.github.io/wiki">
+                                    <i class="fa fa-github fa-1x"></i><span>GitHub</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Discord" href="https://discord.gg/">
+                                    <img src="images/discord.svg" alt="Discord" class="icon discord-icon">
+                                    <span>Discord</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <nav id="nav-main">
+                        <ul>
+                            <li>
+                                <a href="#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="#about">About</a>
+                            </li>
+                            <li>
+                                <a href="#gallery">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="#manual">Manual</a>
+                            </li>
+                            <li>
+                                <a href="#faq">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#support">Support</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div id="nav-trigger"><span></span></div>
+                    <nav id="nav-mobile"></nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="content">
+
+        <section id="important" class="introduction">
+            <div class="row clearfix">
+                <div class="col-1">
+                    <div class="section-heading section-heading-important">
+                        <h3>IMPORTANT</h3>
+                        <h2 class="section-title">Stay Informed, Stay Safe</h2>
+                        <p class="section-subtitle">This device lets you control drones over 4G networks, making long-distance control possible.
+                            But before you jump into using this technology, it's essential to know the rules and regulations in your country.
+                            In many places, like Europe and the US, there are strict laws about how drones can be used. For example, flying a drone
+                            beyond your line of sight (VLOS) might be restricted unless you have special permissions.
+                            It's strongly recommended to check the laws and regulations where you plan to use your drone. It's your responsibility to
+                            follow the rules and ensure you're flying legally.
+                            Breaking these rules can lead to legal trouble, so stay safe and fly responsibly!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="introduction scrollto">
+            <div class="row clearfix">
+                <div class="col-3">
+                    <div class="section-heading">
+                        <h3>ABOUT</h3>
+                        <h2 class="section-title">How it works</h2>
+                        <p class="section-subtitle">A module based on the Raspberry Pi Zero 2 W and a 4G USB modem transmits video streams and
+                            telemetry over the internet, allowing the operator to control the drone with minimal latency over significantly greater
+                            distances than regular RC.
+                            The control is carried out using the CRSF (Crossfire) protocol, making the module compatible with any
+                            controllers that support this protocol.</p>
+                    </div>
+                </div>
+
+                <div class="col-2-3">
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="icon">
+                            <i class="fa fa-rocket fa-2x"></i>
+                        </div>
+                        <div class="icon-block-description">
+                            <h4>Fast</h4>
+                            <p>H.264 is used for video streaming via the UDP protocol, ensuring latency of less than 100 ms while maintaining
+                                efficient compression and real-time responsiveness</p>
+                        </div>
+                    </div>
+
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="icon">
+                            <i class="fa fa-bolt fa-2x"></i>
+                        </div>
+                        <div class="icon-block-description">
+                            <h4>Easy to setup</h4>
+                            <p>Setting up the module is straightforward, requires no special technical expertise, and can be completed in just a few
+                                simple steps with the help of the included comprehensive documentation</p>
+                        </div>
+                    </div>
+
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="icon">
+                            <i class="fa fa-shield fa-2x"></i>
+                        </div>
+                        <div class="icon-block-description">
+                            <h4>Secure</h4>
+                            <p>The connection between the operator and the drone is securely established via a VPN, ensuring reliable and protected
+                                communication</p>
+                        </div>
+                    </div>
+
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="icon">
+                            <i class="fa fa-microchip fa-2x"></i>
+                        </div>
+                        <div class="icon-block-description">
+                            <h4>Customization</h4>
+                            <p>The Raspberry Pi platform provides great opportunities for integrating various devices with the module</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery
+               data-featherlight-filter="a">
+
+            <a href="images/gallery/gallery-image-1.jpg" data-featherlight="image" class="col-3 wow fadeIn"
+               data-wow-delay="0.1s"><img src="images/gallery/gallery-image-1.jpg" alt=""/></a>
+            <a href="images/gallery/gallery-image-2.jpg" data-featherlight="image" class="col-3 wow fadeIn"
+               data-wow-delay="0.3s"><img src="images/gallery/gallery-image-2.jpg" alt=""/></a>
+            <a href="images/gallery/gallery-image-3.jpg" data-featherlight="image" class="col-3 wow fadeIn"
+               data-wow-delay="0.5s"><img src="images/gallery/gallery-image-3.jpg" alt=""/></a>
+            <a href="images/gallery/gallery-image-4.jpg" data-featherlight="image" class="col-3 wow fadeIn"
+               data-wow-delay="1.1s"><img src="images/gallery/gallery-image-4.jpg" alt=""/></a>
+            <a href="images/gallery/gallery-image-5.jpg" data-featherlight="image" class="col-3 wow fadeIn"
+               data-wow-delay="0.9s"><img src="images/gallery/gallery-image-5.jpg" alt=""/></a>
+            <a href="images/gallery/gallery-image-6.jpg" data-featherlight="image" class="col-3 wow fadeIn"
+               data-wow-delay="0.7s"><img src="images/gallery/gallery-image-6.jpg" alt=""/></a>
+
+        </aside>
+
+        <section id="manual" class="scrollto clearfix">
+            <div class="row clearfix">
+                <div class="col-3">
+                    <div class="section-heading">
+                        <h3>MANUAL</h3>
+                        <h2 class="section-title">Build & Configure</h2>
+                        <p class="section-subtitle">The assembly and setup process for the device is thoroughly detailed in the QuadroFleet Wiki.
+                            First, you'll need the device, which you can either assemble yourself or purchase pre-assembled by me.
+                            Once you have the device, follow a few simple steps to get it ready for use.</p>
+                    </div>
+                </div>
+
+                <div class="col-2-3">
+
+                    <a target="_blank" href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Overview" class="col-3">
+                        <img src="images/manual/1-overview.png" alt="Overview"/>
+                        <div class="client-overlay"><span>Overview</span></div>
+                    </a>
+                    <a target="_blank" href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Module-Assembly" class="col-3">
+                        <img src="images/manual/2-assembly.png" alt="Module Assembly"/>
+                        <div class="client-overlay"><span>Module Assembly</span></div>
+                    </a>
+                    <a target="_blank" href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Setting-Up-OpenVPN" class="col-3">
+                        <img src="images/manual/3-openvpn.png" alt="Setting Up OpenVPN"/>
+                        <div class="client-overlay"><span>Setting Up OpenVPN</span></div>
+                    </a>
+                    <a target="_blank" href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Flashing-the-SD-Card" class="col-3">
+                        <img src="images/manual/4-flashing.png" alt="Flashing the SD Card"/>
+                        <div class="client-overlay"><span>Flashing the SD Card</span></div>
+                    </a>
+                    <a target="_blank" href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Update-Settings" class="col-3">
+                        <img src="images/manual/5-settings.png" alt="Update Settings"/>
+                        <div class="client-overlay"><span>Update Settings</span></div>
+                    </a>
+                    <a target="_blank" href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Using-SSH" class="col-3">
+                        <img src="images/manual/6-ssh.png" alt="Using SSH"/>
+                        <div class="client-overlay"><span>Using SSH</span></div>
+                    </a>
+                    <a target="_blank" href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Setting-Up-Control" class="col-3">
+                        <img src="images/manual/7-control.png" alt="Setting Up Control"/>
+                        <div class="client-overlay"><span>Setting Up Control</span></div>
+                    </a>
+                    <a target="_blank" href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Preparing-for-Flight" class="col-3">
+                        <img src="images/manual/8-preparing.png" alt="Preparing for Flight"/>
+                        <div class="client-overlay"><span>Preparing for Flight</span></div>
+                    </a>
+                    <a target="_blank" href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Map-Navigation" class="col-3">
+                        <img src="images/manual/9-map.png" alt="Map Navigation"/>
+                        <div class="client-overlay"><span>Map Navigation</span></div>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="faq" class="scrollto clearfix">
+            <div class="row clearfix">
+                <div class="col-1">
+                    <div class="section-heading">
+                        <h2 class="section-title">Frequently Asked Questions</h2>
+                    </div>
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <h4 class="faq-question">What is QuadroFleet?</h4>
+                            <p class="faq-answer">QuadroFleet is a hardware-software system based on the Raspberry Pi Zero 2 W and a 4G USB modem.
+                                When connected to a flight controller, the module uses the CRSF (Crossfire) protocol to transmit all 16 control
+                                channels and receive telemetry in real time.
+                                With the operator's computer running specialized software, the drone can be controlled with minimal latency. Data
+                                transmission, including video streams and telemetry, is carried out via the UDP protocol, ensuring reliable
+                                communication and high performance even over long distances.
+                                The drone is directly controlled using a regular gaming gamepad (XBOX or PlayStation) connected to the operator's
+                                computer. Button combinations on the gamepad allow switching between modes (customizable channels).
+                            </p>
+                        </div>
+                        <div class="faq-item">
+                            <h4 class="faq-question">How do I set up QuadroFleet?</h4>
+                            <p class="faq-answer">
+                                To set up the QuadroFleet module, you need to complete a few simple steps: create a new account for the VPN
+                                connection, download the configuration profiles, flash the firmware to the SD card, modify the configuration files on
+                                the card (update the access credentials and the VPN IP address), and install the application on your computer.
+                                Once these steps are done, the system will be ready for use.
+                                A more detailed guide can be found in the <a
+                                    href="https://github.com/beep-systems/quadrofleet.github.io/wiki">Wiki</a>.
+                            </p>
+                        </div>
+                        <div class="faq-item">
+                            <h4 class="faq-question">Is QuadroFleet compatible with my drone?</h4>
+                            <p class="faq-answer">QuadroFleet connects to the flight controller via four wires: 5V (+), Ground (-), Rx (Receive pin),
+                                and Tx (Transmit pin).
+                                If your drone has these pins and supports data exchange using the CRSF (Crossfire) protocol, the module is
+                                compatible.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4 class="faq-question">What is the latency of QuadroFleet?</h4>
+                            <p class="faq-answer">
+                                QuadroFleet achieves latency as low as 100 ms, depending on your network conditions.
+                                Data transfer speed is approximately 140–150 Kbps.
+                            </p>
+                        </div>
+                        <div class="faq-item">
+                            <h4 class="faq-question">Do I need a SIM card?</h4>
+                            <p class="faq-answer">
+                                Yes, a SIM card is required for data transmission.
+                                It is crucial to check beforehand
+                                whether your plan has enough data available to ensure uninterrupted operation during the flight.
+                                Approximate data usage: 500 megabytes per hour.
+                            </p>
+                        </div>
+                        <div class="faq-item">
+                            <h4 class="faq-question">Is using QuadroFleet legal in my country?</h4>
+                            <p class="faq-answer">
+                                The legality of using QuadroFleet depends on the drone regulations in your country.
+                                In many regions,
+                                operating drones beyond the visual line of sight (VLOS)
+                                or using 4G networks for control may require special permits or authorization.
+                                Always check local laws and guidelines from aviation authorities before operating your drone.
+                                Compliance is your responsibility to ensure safe and lawful operation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="support" class="introduction scrollto">
+            <div class="row clearfix">
+                <div class="col-4">
+                    <div class="section-heading">
+                        <h3>LINKS</h3>
+                        <ul>
+                            <li><a href="https://github.com/beep-systems/quadrofleet.github.io/wiki">Wiki</a></li>
+                            <li><a href="https://github.com/beep-systems/quadrofleet.github.io/issues">Issues</a></li>
+                            <li><a href="https://discord.gg/">Discord</a></li>
+                            <li><a href="mailto:quadrofleet@gmail.com">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-2-3">
+                    <div class="section-heading">
+                        <h3>SUPPORT</h3>
+                        <p class="section-subtitle">If you have any questions or need help, feel free to reach out.
+                            You can contact me directly via email, Discord or explore the GitHub Wiki and Issues section for detailed guides and
+                            community discussions.</p>
+                        <p class="section-subtitle">If you like this project and want to follow its progress, you can support the author. Thanks!</p>
+                        <div class="qr-container">
+                            <img src="images/btc-qr.svg" alt="BTC QR Code" class="qr-code"/>
+                            <span class="btc-address">BTC: 16EnQv9H51217hwESdaYMFRZihS9MtLmgt</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="landing-footer" class="clearfix">
+        <div class="row clearfix text-center">
+            <p id="copyright" class="col-1">Copyright © 2024 <a href="https://quadrofleet.com">QuadroFleet</a></p>
+        </div>
+    </footer>
+</div>
+
+<script src="js/jquery.1.8.3.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/featherlight.min.js"></script>
+<script src="js/featherlight.gallery.min.js"></script>
+<script src="js/jquery.enllax.min.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.stickyNavbar.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/images-loaded.min.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="js/site.js"></script>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "name": "QuadroFleet - Drone Control Over 4G Networks",
+                "url": "https://quadrofleet.com",
+                "description": "QuadroFleet is an advanced system designed for low-latency drone control and FPV streaming over 4G networks. Leveraging the CRSF (Crossfire) protocol, it ensures precise communication with flight controllers. The system supports gamepad-based operation using XBOX or PlayStation controllers, offering a seamless and intuitive control experience. QuadroFleet uses VPN (OpenVPN) for secure remote connections, UDP for efficient data transmission, and H.264 for video streaming from onboard cameras. Designed for reliability and performance, it’s perfect for long-distance drone operations.",
+                "sameAs": [
+                    "https://github.com/beep-systems/quadrofleet.github.io/wiki"
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What is QuadroFleet?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "QuadroFleet is a hardware-software system based on the Raspberry Pi Zero 2 W and a 4G USB modem. It enables low-latency drone control and FPV streaming using the CRSF protocol."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How do I set up QuadroFleet?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "To set up QuadroFleet, you need to create a VPN account, configure the module, and install the application on your computer. Detailed steps are available in the QuadroFleet Wiki."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is QuadroFleet compatible with my drone?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "QuadroFleet is compatible with flight controllers that support the CRSF protocol and have pins for power, ground, Rx, and Tx connections."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What is the latency of QuadroFleet?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "QuadroFleet achieves latency as low as 100 ms depending on network conditions, with a data transfer speed of approximately 140–150 Kbps."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do I need a SIM card?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, QuadroFleet requires a SIM card for data transmission. Ensure your plan has sufficient data; it uses approximately 500 MB per hour."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is using QuadroFleet legal in my country?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The legality of using QuadroFleet depends on the drone regulations in your country. In many regions, operating drones beyond the visual line of sight (VLOS) or using 4G networks for control may require special permits or authorization. Always check local laws and guidelines from aviation authorities before operating your drone. Compliance is your responsibility to ensure safe and lawful operation."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+</script>
+
+</body>
+</html>
