@@ -2363,6 +2363,22 @@ blockquote {
 
 }
 
+.download-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    gap: 20px;     /* space between items */
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.download-buttons a {
+    display: inline-block;
+    margin: 10px 15px;
+}
+
 
 
 
