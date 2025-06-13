@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>QuadroFleet - Long-Range Drone Control Over 4G/5G</title>
+    <meta name="keywords"
+          content="QuadroFleet, drone, FPV, CRSF, Crossfire, 4G, 5G, low-latency, WireGuard, VPN, UDP, H.265, gamepad, XBOX, PlayStation, long-range drone, OpenIPC, drone control">
+    <meta name="description"
+          content="QuadroFleet enables low-latency drone control and FPV streaming over 4G/5G networks using the CRSF protocol. Control your drone with XBOX or PlayStation gamepads via a secure WireGuard VPN. Perfect for long-range operations with real-time telemetry and video.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/color.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link href="../css/animate.css" rel="stylesheet" type="text/css">
+    <link href="../css/md.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <meta property="og:title" content="QuadroFleet - Long-Range Drone Control Over 4G/5G">
+    <meta property="og:description"
+          content="Control drones over 4G/5G with low-latency FPV streaming and CRSF protocol. Secure, reliable, and easy to set up.">
+    <meta property="og:image" content="https://quadrofleet.com/images/logo.svg">
+    <meta property="og:url" content="https://quadrofleet.com">
+    <meta property="og:type" content="website">
+</head>
+<body>
+
+<div id="preloader">
+    <div id="status" class="la-ball-triangle-path">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
+    <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
+    <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
+    <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
+</div>
+
+<div id="wrapper">
+
+    <header id="home" class="scrollto clearfix" data-enllax-ratio=".5">
+        <div id="header" class="nav-collapse">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <div id="logo">
+                        <img src="../images/logo.svg" id="banner-logo" alt="QuadroFleet Drone Control Logo"/>
+                        <img src="../images/logo.svg" id="navigation-logo" alt="QuadroFleet Drone Control Logo"/>
+                    </div>
+
+                    <aside>
+                        <ul class="social-icons">
+                            <li>
+                                <a target="_blank" title="GitHub" href="https://github.com/beep-systems/quadrofleet.github.io/wiki"
+                                   aria-label="Visit QuadroFleet GitHub">
+                                    <i class="fa fa-github fa-1x"></i><span>GitHub</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Discord" href="https://discord.gg/WCtTHMkHAK" aria-label="Join QuadroFleet Discord">
+                                    <img src="../images/discord.svg" alt="Discord Icon" class="icon discord-icon">
+                                    <span>Discord</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <nav id="nav-main">
+                        <ul>
+                            <li>
+                                <a href="/index.html#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#about">About</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#gallery">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#manual">Manual</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#faq">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#support">Support</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div id="nav-trigger" aria-label="Toggle Mobile Navigation"><span></span></div>
+                    <nav id="nav-mobile" aria-hidden="true"></nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="content">
+
+        <section id="important" class="introduction">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <div class="crossnote markdown-preview">
+
+                        <h2>Overview</h2>
+
+                        <p>QuadroFleet is a modular, open-source platform for controlling FPV drones over cellular networks. It integrates low-latency video streaming, secure communication, and robust safety features, making it suitable for both hobbyists and professional applications.</p>
+                        <p>This project was partially inspired by another one — <a href="https://github.com/danielbanar/MasinaV3">MasinaV3</a>, and I would also like to thank its author Daniel Banar for the help and advice during the OpenIPC firmware configuration.<br>
+                            I would also recommend his <a href="https://www.youtube.com/@DanielBanar">YouTube channel</a>, where you can find working examples of this technology in use.</p>
+                        <h2 id="features">Features </h2>
+                        <ul>
+                            <li><strong>Low-Latency Video</strong>: Delivers FPV streams with &lt;100 ms latency using H.265 encoding.</li>
+                            <li><strong>Connection Loss Handling</strong>: Configurable failsafe modes (hover, land, or RTH) activate on signal loss.</li>
+                            <li><strong>Live GPS Tracking</strong>: Displays drone position on an interactive OpenStreetMap interface.</li>
+                            <li><strong>Extended Range</strong>: Leverages 4G/5G networks for ranges far beyond traditional 2.4 GHz systems.</li>
+                            <li><strong>On-Screen Display (OSD)</strong>: Overlays telemetry (battery voltage, GPS coordinates, speed, altitude, compass) on the video feed.</li>
+                            <li><strong>Cross-Platform Control</strong>: Supports XBOX, PlayStation, or RC controllers via USB.</li>
+                        </ul>
+                        <h2 id="system-architecture">System Architecture </h2>
+                        <p>QuadroFleet operates through a client-server model, with components communicating over a secure <strong>WireGuard VPN</strong> using <strong>UDP</strong> for minimal latency.</p>
+                        <h3 id="1-drone-module">1. Drone Module </h3>
+                        <ul>
+                            <li><strong>Hardware</strong>:
+                                <ul>
+                                    <li>OpenIPC-based IP camera (e.g., SSC30KQ, SSC338Q) for video and telemetry.</li>
+                                    <li>4G/5G modem (e.g., Quectel EC25, EP06) for internet connectivity.</li>
+                                    <li>Flight controller (e.g., SpeedyBee F405) interfaced via UART using the <strong>CRSF protocol</strong>.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Functionality</strong>:
+                                <ul>
+                                    <li>Streams H.265 video over UDP without additional synchronization to minimize latency.</li>
+                                    <li>Receives CRSF control frames and forwards them to the flight controller.</li>
+                                    <li>Collects and transmits telemetry (e.g., battery, GPS) to the ground station.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h3 id="2-ground-station-operator-side">2. Ground Station (Operator Side) </h3>
+                        <ul>
+                            <li><strong>Hardware</strong>: PC or smartphone running the QuadroFleet application.</li>
+                            <li><strong>Functionality</strong>:
+                                <ul>
+                                    <li>Establishes a connection via WireGuard VPN tunnel to the drone.</li>
+                                    <li>Reads joystick inputs (throttle, pitch, roll, yaw) from a gamepad or RC transmitter.</li>
+                                    <li>Encodes inputs into CRSF frames and sends them via UDP.</li>
+                                    <li>Decodes telemetry and overlays it on the video stream.</li>
+                                    <li>Displays real-time drone position on an OpenStreetMap-based interface.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h3 id="3-vpn-server">3. VPN Server </h3>
+                        <ul>
+                            <li><strong>Purpose</strong>: Facilitates secure, direct communication between the drone and ground station.</li>
+                            <li><strong>Setup</strong>: Runs WireGuard on a VPS or local PC, requiring minimal configuration.</li>
+                            <li><strong>Benefits</strong>: Eliminates complex network setups and ensures data privacy.</li>
+                        </ul>
+                        <h3 id="4-safety--resilience">4. Safety &amp; Resilience </h3>
+                        <ul>
+                            <li><strong>Connection Loss</strong>:
+                                <ul>
+                                    <li>After 250 ms (configurable), the drone enters hover mode.</li>
+                                    <li>After 5 seconds (configurable), it initiates landing or RTH based on flight controller settings.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Redundancy</strong>: Optional ELRS (ExpressLRS) backup for local control if cellular connectivity fails.</li>
+                        </ul>
+                        <div align="center"><img src="https://quadrofleet.com/images/wiki/overview/pic1.png" alt="System Diagram"></div>
+                        <h2 id="fpv-drone-module">FPV Drone Module </h2>
+                        <p>The drone module integrates:</p>
+                        <ul>
+                            <li><strong>OpenIPC Camera</strong>: Connects to the flight controller via UART, using CRSF for telemetry and control. Streams H.265 video over UDP.</li>
+                            <li><strong>4G/5G Modem</strong>: Provides internet connectivity for VPN and data transmission.</li>
+                            <li><strong>Power Management</strong>: A DC-DC buck converter ensures stable 5V power for the camera and modem.</li>
+                        </ul>
+                        <div align="center"><img src="https://quadrofleet.com/images/wiki/overview/pic2.png" alt="FPV Drone Module"></div>
+                        <h2 id="vpn-server">VPN Server </h2>
+                        <p>The <strong>VPN Server</strong> is a service that allows the creation of a Virtual Private Network (VPN), enabling data exchange without the need for additional network configurations. In this case, the VPN connection allows the operator to quickly and easily connect directly to the drone.</p>
+                        <div align="center"><img src="https://quadrofleet.com/images/wiki/overview/pic3.png" alt="VPN connection"></div>
+                        <h2 id="operators-application">Operator's Application </h2>
+                        <p>The QuadroFleet control application is a <strong>Java-based program</strong> with:</p>
+                        <ul>
+                            <li><strong>SDL Framework</strong>: Supports gamepad input (XBOX, PlayStation, or RC controllers).</li>
+                            <li><strong>Web Server</strong>: Hosts a local interface displaying:
+                                <ul>
+                                    <li>Live video feed with OSD telemetry.</li>
+                                    <li>Interactive map for GPS tracking.</li>
+                                </ul>
+                            </li>
+                            <li><strong>UDP Communication</strong>: Sends control commands and receives telemetry/video.</li>
+                        </ul>
+                        <p>Android <a href="https://play.google.com/store/apps/details?id=systems.beep.christof&amp;hl=en">QuadroFleet app</a> is also available.</p>
+                        <div align="center"><img src="https://quadrofleet.com/images/wiki/overview/pic4.png" alt="Operator's Application"></div>
+                        <h2 id="next-steps">Next Steps </h2>
+                        <ol>
+                            <li><strong>Assemble the Drone Module</strong>: Follow the <a href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Module-Assembly">Module Assembly</a> guide.</li>
+                            <li><strong>Configure VPN</strong>: Set up WireGuard as described in <a href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Setting-Up-VPN">Setting Up VPN</a>.</li>
+                            <li><strong>Flash Firmware</strong>: Install OpenIPC firmware per the <a href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Firmware">Firmware</a> guide.</li>
+                            <li><strong>Tune Settings</strong>: Configure camera and app settings in <a href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Update-Settings">Update Settings</a>.</li>
+                        </ol>
+                        <p>For troubleshooting, refer to the <a href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Troubleshooting">Troubleshooting</a> section.</p>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="landing-footer" class="clearfix">
+        <div class="row clearfix text-center">
+            <p id="copyright" class="col-1">Copyright © 2025 <a href="https://quadrofleet.com">QuadroFleet</a></p>
+        </div>
+    </footer>
+</div>
+
+<script src="../js/jquery.1.8.3.min.js"></script>
+<script src="../js/wow.min.js"></script>
+<script src="../js/featherlight.min.js"></script>
+<script src="../js/featherlight.gallery.min.js"></script>
+<script src="../js/jquery.enllax.min.js"></script>
+<script src="../js/jquery.scrollUp.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/jquery.stickyNavbar.min.js"></script>
+<script src="../js/jquery.waypoints.min.js"></script>
+<script src="../js/images-loaded.min.js"></script>
+<script src="../js/lightbox.min.js"></script>
+<script src="../js/site.js"></script>
+
+</body>
+</html>

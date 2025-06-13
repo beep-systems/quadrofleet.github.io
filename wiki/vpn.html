@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>QuadroFleet - Long-Range Drone Control Over 4G/5G</title>
+    <meta name="keywords"
+          content="QuadroFleet, drone, FPV, CRSF, Crossfire, 4G, 5G, low-latency, WireGuard, VPN, UDP, H.265, gamepad, XBOX, PlayStation, long-range drone, OpenIPC, drone control">
+    <meta name="description"
+          content="QuadroFleet enables low-latency drone control and FPV streaming over 4G/5G networks using the CRSF protocol. Control your drone with XBOX or PlayStation gamepads via a secure WireGuard VPN. Perfect for long-range operations with real-time telemetry and video.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/color.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link href="../css/animate.css" rel="stylesheet" type="text/css">
+    <link href="../css/md.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <meta property="og:title" content="QuadroFleet - Long-Range Drone Control Over 4G/5G">
+    <meta property="og:description"
+          content="Control drones over 4G/5G with low-latency FPV streaming and CRSF protocol. Secure, reliable, and easy to set up.">
+    <meta property="og:image" content="https://quadrofleet.com/images/logo.svg">
+    <meta property="og:url" content="https://quadrofleet.com">
+    <meta property="og:type" content="website">
+</head>
+<body>
+
+<div id="preloader">
+    <div id="status" class="la-ball-triangle-path">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
+    <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
+    <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
+    <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
+</div>
+
+<div id="wrapper">
+
+    <header id="home" class="scrollto clearfix" data-enllax-ratio=".5">
+        <div id="header" class="nav-collapse">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <div id="logo">
+                        <img src="../images/logo.svg" id="banner-logo" alt="QuadroFleet Drone Control Logo"/>
+                        <img src="../images/logo.svg" id="navigation-logo" alt="QuadroFleet Drone Control Logo"/>
+                    </div>
+
+                    <aside>
+                        <ul class="social-icons">
+                            <li>
+                                <a target="_blank" title="GitHub" href="https://github.com/beep-systems/quadrofleet.github.io/wiki"
+                                   aria-label="Visit QuadroFleet GitHub">
+                                    <i class="fa fa-github fa-1x"></i><span>GitHub</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Discord" href="https://discord.gg/WCtTHMkHAK" aria-label="Join QuadroFleet Discord">
+                                    <img src="../images/discord.svg" alt="Discord Icon" class="icon discord-icon">
+                                    <span>Discord</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <nav id="nav-main">
+                        <ul>
+                            <li>
+                                <a href="/index.html#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#about">About</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#gallery">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#manual">Manual</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#faq">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#support">Support</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div id="nav-trigger" aria-label="Toggle Mobile Navigation"><span></span></div>
+                    <nav id="nav-mobile" aria-hidden="true"></nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="content">
+
+        <section id="important" class="introduction">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <div class="crossnote markdown-preview">
+
+                        <h2>Setting Up VPN</h2>
+
+                        <p>A <strong>WireGuard VPN</strong> ensures secure, low-latency communication between the QuadroFleet drone and the operator’s
+                            device. This guide covers setting up the VPN server and client configurations.</p>
+                        <h3 id="prerequisites">Prerequisites </h3>
+                        <ul>
+                            <li>A Virtual Private Server (VPS) or local PC with a public IP address.</li>
+                            <li>Admin access to install WireGuard.</li>
+                            <li>A PC or smartphone for the operator’s control application.</li>
+                            <li>The drone’s OpenIPC camera with a 4G/5G modem and SIM card.</li>
+                        </ul>
+                        <h3 id="step-1-install-wireguard-on-the-vpn-server">Step 1: Install WireGuard on the VPN Server </h3>
+                        <ol>
+                            <li>
+                                <p>On your VPS or local PC (Ubuntu/Debian recommended):</p>
+                                <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token function">sudo</span> <span
+                                        class="token function">apt</span> update
+<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> wireguard
+</code></pre>
+                            </li>
+                            <li>
+                                <p>Generate private and public keys:</p>
+                                <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>wg genkey <span
+                                        class="token operator">|</span> <span class="token function">tee</span> /etc/wireguard/privatekey <span
+                                        class="token operator">|</span> wg pubkey <span class="token operator">&gt;</span> /etc/wireguard/publickey
+</code></pre>
+                                <ul>
+                                    <li>Private key example: <code>sHxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxFM=</code></li>
+                                    <li>Public key example: <code>lYxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx08=</code></li>
+                                </ul>
+                                <p>In the same way generate private and public keys for operator's device and drone:</p>
+                                <ul>
+                                    <li>
+                                        <p><code>sHxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxFM=</code> - private key of VPN server</p>
+                                    </li>
+                                    <li>
+                                        <p><code>lYxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx08=</code> - public key of VPN server</p>
+                                    </li>
+                                    <li>
+                                        <p><code>yIxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxG4=</code> - private key of Operator Device (PC/Phone)</p>
+                                    </li>
+                                    <li>
+                                        <p><code>VGxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxnk=</code> - public key of Operator Device (PC/Phone)</p>
+                                    </li>
+                                    <li>
+                                        <p><code>QExxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxXY=</code> - private key of Drone (OpenIPC Camera)</p>
+                                    </li>
+                                    <li>
+                                        <p><code>TmxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxEc=</code> - public key of Drone (OpenIPC Camera)</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Create the WireGuard configuration file (<code>/etc/wireguard/wg0.conf</code>):</p>
+                                <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token punctuation">[</span>Interface<span
+                                        class="token punctuation">]</span>
+Address <span class="token operator">=</span> <span class="token number">10.253</span>.0.1/24
+ListenPort <span class="token operator">=</span> <span class="token number">51820</span>
+PrivateKey <span class="token operator">=</span> <span class="token assign-left variable">sHxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxFM</span><span
+                                            class="token operator">=</span>
+
+<span class="token punctuation">[</span>Peer<span class="token punctuation">]</span>
+<span class="token comment"># Operator Device (PC/Phone)</span>
+PublicKey <span class="token operator">=</span> <span class="token assign-left variable">VGxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxnk</span><span
+                                            class="token operator">=</span>
+AllowedIPs <span class="token operator">=</span> <span class="token number">10.253</span>.0.3/32
+
+<span class="token punctuation">[</span>Peer<span class="token punctuation">]</span>
+<span class="token comment"># Drone (OpenIPC Camera)</span>
+PublicKey <span class="token operator">=</span> <span class="token assign-left variable">TmxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxEc</span><span
+                                            class="token operator">=</span>
+AllowedIPs <span class="token operator">=</span> <span class="token number">10.253</span>.0.2/32
+</code></pre>
+                            </li>
+                            <li>
+                                <p>Start the WireGuard service:</p>
+                                <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token function">sudo</span> systemctl <span
+                                        class="token builtin class-name">enable</span> wg-quick@wg0
+<span class="token function">sudo</span> systemctl start wg-quick@wg0
+</code></pre>
+                            </li>
+                            <li>
+                                <p>Open the firewall port (51820/UDP):</p>
+                                <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token function">sudo</span> ufw allow <span
+                                        class="token number">51820</span>/udp
+</code></pre>
+                            </li>
+                        </ol>
+                        <h3 id="step-2-configure-the-operator-device">Step 2: Configure the Operator Device </h3>
+                        <ol>
+                            <li>Install WireGuard on your PC or smartphone:
+                                <ul>
+                                    <li><strong>Ubuntu/Debian</strong>: <code>sudo apt install wireguard</code></li>
+                                    <li><strong>Windows/macOS</strong>: Download from <a href="https://www.wireguard.com/install/">WireGuard</a></li>
+                                    <li><strong>Android/iOS</strong>: Install the WireGuard app from the <a
+                                            href="https://play.google.com/store/apps/details?id=com.wireguard.android&amp;hl=en">Google Play</a>.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Create a client configuration file:
+                                <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token punctuation">[</span>Interface<span
+                                        class="token punctuation">]</span>
+PrivateKey <span class="token operator">=</span> <span class="token assign-left variable">yIxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxG4</span><span
+                                            class="token operator">=</span>
+Address <span class="token operator">=</span> <span class="token number">10.253</span>.0.3/24
+
+<span class="token punctuation">[</span>Peer<span class="token punctuation">]</span>
+PublicKey <span class="token operator">=</span> <span class="token assign-left variable">lYxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx08</span><span
+                                            class="token operator">=</span>
+AllowedIPs <span class="token operator">=</span> <span class="token number">10.253</span>.0.0/24
+Endpoint <span class="token operator">=</span> <span class="token operator">&lt;</span>VPS_PUBLIC_IP<span class="token operator">&gt;</span>:51820
+PersistentKeepalive <span class="token operator">=</span> <span class="token number">25</span>
+</code></pre>
+                                <ul>
+                                    <li>Replace <code>&lt;VPS_PUBLIC_IP&gt;</code> with your VPS’s public IP address.</li>
+                                </ul>
+                            </li>
+                            <li>Activate the VPN tunnel:
+                                <ul>
+                                    <li>On Windows: Run WireGuard application and activate new connection</li>
+                                    <li>On Linux: <code>wg-quick up ./client.conf</code></li>
+                                    <li>On mobile: Import the config file into the WireGuard app and activate.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <h3 id="step-3-configure-the-drones-openipc-camera">Step 3: Configure the Drone’s OpenIPC Camera </h3>
+                        <ol>
+                            <li>Access the camera’s web interface (default IP via DHCP).</li>
+                            <li>Navigate to <strong>Extensions</strong> &gt; <strong>WireGuard</strong> and set:
+                                <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token punctuation">[</span>Interface<span
+                                        class="token punctuation">]</span>
+PrivateKey <span class="token operator">=</span> <span class="token assign-left variable">QExxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxXY</span><span
+                                            class="token operator">=</span>
+
+<span class="token punctuation">[</span>Peer<span class="token punctuation">]</span>
+PublicKey <span class="token operator">=</span> <span class="token assign-left variable">lYxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx08</span><span
+                                            class="token operator">=</span>
+AllowedIPs <span class="token operator">=</span> <span class="token number">10.253</span>.0.0/24
+Endpoint <span class="token operator">=</span> <span class="token operator">&lt;</span>VPS_PUBLIC_IP<span class="token operator">&gt;</span>:51820
+PersistentKeepalive <span class="token operator">=</span> <span class="token number">25</span>
+</code></pre>
+                            </li>
+                            <li>Update the network interface configuration:
+                                <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>auto wg0
+iface wg0 inet static
+   address <span class="token number">10.253</span>.0.2
+   netmask <span class="token number">255.255</span>.255.0
+   pre-up modprobe wireguard
+   pre-up <span class="token function">ip</span> <span class="token function">link</span> <span class="token function">add</span> dev wg0 <span
+                                            class="token builtin class-name">type</span> wireguard
+   pre-up wg setconf wg0 /etc/wireguard.conf
+   post-down <span class="token function">ip</span> <span class="token function">link</span> del dev wg0
+</code></pre>
+                            </li>
+                            <li>Reboot the camera to apply changes.</li>
+                        </ol>
+                        <h3 id="step-4-verify-connectivity">Step 4: Verify Connectivity </h3>
+                        <ul>
+                            <li>Ping the drone’s VPN IP (<code>10.253.0.2</code>) from the operator device (<code>10.253.0.3</code>).</li>
+                            <li>Ensure the camera’s web interface is accessible over the VPN.</li>
+                            <li>Test UDP communication using the QuadroFleet application.</li>
+                        </ul>
+                        <h3 id="notes">Notes </h3>
+                        <ul>
+                            <li>Use a VPS with low-latency connectivity (e.g., AWS, DigitalOcean or <a href="https://www.ionos.com/">IONOS</a> VPS for
+                                1$/mo) for optimal performance.
+                            </li>
+                            <li>Ensure the SIM card has sufficient data and supports 4G/5G in your area.</li>
+                            <li>If using a local PC as the VPN server, configure port forwarding (51820/UDP) on your router.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="landing-footer" class="clearfix">
+        <div class="row clearfix text-center">
+            <p id="copyright" class="col-1">Copyright © 2025 <a href="https://quadrofleet.com">QuadroFleet</a></p>
+        </div>
+    </footer>
+</div>
+
+<script src="../js/jquery.1.8.3.min.js"></script>
+<script src="../js/wow.min.js"></script>
+<script src="../js/featherlight.min.js"></script>
+<script src="../js/featherlight.gallery.min.js"></script>
+<script src="../js/jquery.enllax.min.js"></script>
+<script src="../js/jquery.scrollUp.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/jquery.stickyNavbar.min.js"></script>
+<script src="../js/jquery.waypoints.min.js"></script>
+<script src="../js/images-loaded.min.js"></script>
+<script src="../js/lightbox.min.js"></script>
+<script src="../js/site.js"></script>
+
+</body>
+</html>

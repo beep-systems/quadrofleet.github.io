@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>QuadroFleet - Long-Range Drone Control Over 4G/5G</title>
+    <meta name="keywords"
+          content="QuadroFleet, drone, FPV, CRSF, Crossfire, 4G, 5G, low-latency, WireGuard, VPN, UDP, H.265, gamepad, XBOX, PlayStation, long-range drone, OpenIPC, drone control">
+    <meta name="description"
+          content="QuadroFleet enables low-latency drone control and FPV streaming over 4G/5G networks using the CRSF protocol. Control your drone with XBOX or PlayStation gamepads via a secure WireGuard VPN. Perfect for long-range operations with real-time telemetry and video.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/color.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link href="../css/animate.css" rel="stylesheet" type="text/css">
+    <link href="../css/md.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <meta property="og:title" content="QuadroFleet - Long-Range Drone Control Over 4G/5G">
+    <meta property="og:description"
+          content="Control drones over 4G/5G with low-latency FPV streaming and CRSF protocol. Secure, reliable, and easy to set up.">
+    <meta property="og:image" content="https://quadrofleet.com/images/logo.svg">
+    <meta property="og:url" content="https://quadrofleet.com">
+    <meta property="og:type" content="website">
+</head>
+<body>
+
+<div id="preloader">
+    <div id="status" class="la-ball-triangle-path">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
+    <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
+    <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
+    <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
+</div>
+
+<div id="wrapper">
+
+    <header id="home" class="scrollto clearfix" data-enllax-ratio=".5">
+        <div id="header" class="nav-collapse">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <div id="logo">
+                        <img src="../images/logo.svg" id="banner-logo" alt="QuadroFleet Drone Control Logo"/>
+                        <img src="../images/logo.svg" id="navigation-logo" alt="QuadroFleet Drone Control Logo"/>
+                    </div>
+
+                    <aside>
+                        <ul class="social-icons">
+                            <li>
+                                <a target="_blank" title="GitHub" href="https://github.com/beep-systems/quadrofleet.github.io/wiki"
+                                   aria-label="Visit QuadroFleet GitHub">
+                                    <i class="fa fa-github fa-1x"></i><span>GitHub</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Discord" href="https://discord.gg/WCtTHMkHAK" aria-label="Join QuadroFleet Discord">
+                                    <img src="../images/discord.svg" alt="Discord Icon" class="icon discord-icon">
+                                    <span>Discord</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <nav id="nav-main">
+                        <ul>
+                            <li>
+                                <a href="/index.html#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#about">About</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#gallery">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#manual">Manual</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#faq">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#support">Support</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div id="nav-trigger" aria-label="Toggle Mobile Navigation"><span></span></div>
+                    <nav id="nav-mobile" aria-hidden="true"></nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="content">
+
+        <section id="important" class="introduction">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <div class="crossnote markdown-preview">
+
+                        <h2>Preparing for Flight</h2>
+
+                        <p>Before launching the drone and activating the <strong>QuadroFleet</strong> module, you must perform the following
+                            pre-flight procedures.<br>
+                            These steps are essential for safety, stability, and reliable communication.</p>
+                        <h3 id="1-physical-inspection">1. Physical Inspection </h3>
+                        <ul>
+                            <li>Check the drone frame, propellers, motors, and wiring for visible damage.</li>
+                            <li>Ensure all screws and connectors are secure.</li>
+                            <li>Verify that the battery is fully charged and properly mounted.</li>
+                        </ul>
+                        <h3 id="2-firmware-and-configuration-check">2. Firmware and Configuration Check </h3>
+                        <ul>
+                            <li>Make sure the flight controller is flashed with the correct version of <strong>iNav</strong>.</li>
+                            <li>Confirm that all sensors (accelerometer, barometer, magnetometer, GPS) are calibrated.</li>
+                            <li>Verify that the correct mixer, board layout, and receiver type are selected.</li>
+                        </ul>
+                        <h3 id="3-channel-mapping-and-failsafes">3. Channel Mapping and Failsafes </h3>
+                        <ul>
+                            <li>Confirm correct <a href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Flight-Controller-Settings">channel
+                                mapping</a>.
+                            </li>
+                            <li>Test all control inputs (pitch, roll, yaw, throttle, arming switch, mode switch).</li>
+                            <li>Configure and verify failsafe behavior — especially return-to-home (RTH) or disarm on signal loss.</li>
+                        </ul>
+                        <h3 id="4-quadrofleet-module-initialization">4. QuadroFleet Module Initialization </h3>
+                        <ul>
+                            <li>Power on the drone.</li>
+                            <li>Ensure it has a stable connection to the control application.</li>
+                            <li>Verify that telemetry and video stream are functional.</li>
+                        </ul>
+                        <h3 id="5-compass-and-gps-lock">5. Compass and GPS Lock </h3>
+                        <ul>
+                            <li>Wait for a valid GPS lock (at least 6–8 satellites recommended).</li>
+                            <li>Ensure the compass heading is correct and there are no magnetic interference warnings.</li>
+                        </ul>
+                        <h3 id="6-arming-test">6. Arming Test </h3>
+                        <ul>
+                            <li>Test the arming and disarming procedure.</li>
+                            <li>Make sure the drone does not arm unless all safety conditions are met (e.g., GPS lock, throttle low, level
+                                orientation).
+                            </li>
+                        </ul>
+                        <h3 id="7-environment-assessment">7. Environment Assessment </h3>
+                        <ul>
+                            <li>Check weather conditions, wind, and lighting.</li>
+                            <li>Ensure a clear takeoff and landing zone free of people and obstacles.</li>
+                            <li>Avoid strong magnetic fields, large metal objects, and sources of radio interference.</li>
+                        </ul>
+                        <p>Once all checks are complete, the system is ready for takeoff.</p>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="landing-footer" class="clearfix">
+        <div class="row clearfix text-center">
+            <p id="copyright" class="col-1">Copyright © 2025 <a href="https://quadrofleet.com">QuadroFleet</a></p>
+        </div>
+    </footer>
+</div>
+
+<script src="../js/jquery.1.8.3.min.js"></script>
+<script src="../js/wow.min.js"></script>
+<script src="../js/featherlight.min.js"></script>
+<script src="../js/featherlight.gallery.min.js"></script>
+<script src="../js/jquery.enllax.min.js"></script>
+<script src="../js/jquery.scrollUp.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/jquery.stickyNavbar.min.js"></script>
+<script src="../js/jquery.waypoints.min.js"></script>
+<script src="../js/images-loaded.min.js"></script>
+<script src="../js/lightbox.min.js"></script>
+<script src="../js/site.js"></script>
+
+</body>
+</html>

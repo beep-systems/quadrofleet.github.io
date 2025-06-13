@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>QuadroFleet - Long-Range Drone Control Over 4G/5G</title>
+    <meta name="keywords"
+          content="QuadroFleet, drone, FPV, CRSF, Crossfire, 4G, 5G, low-latency, WireGuard, VPN, UDP, H.265, gamepad, XBOX, PlayStation, long-range drone, OpenIPC, drone control">
+    <meta name="description"
+          content="QuadroFleet enables low-latency drone control and FPV streaming over 4G/5G networks using the CRSF protocol. Control your drone with XBOX or PlayStation gamepads via a secure WireGuard VPN. Perfect for long-range operations with real-time telemetry and video.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/color.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link href="../css/animate.css" rel="stylesheet" type="text/css">
+    <link href="../css/md.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <meta property="og:title" content="QuadroFleet - Long-Range Drone Control Over 4G/5G">
+    <meta property="og:description"
+          content="Control drones over 4G/5G with low-latency FPV streaming and CRSF protocol. Secure, reliable, and easy to set up.">
+    <meta property="og:image" content="https://quadrofleet.com/images/logo.svg">
+    <meta property="og:url" content="https://quadrofleet.com">
+    <meta property="og:type" content="website">
+</head>
+<body>
+
+<div id="preloader">
+    <div id="status" class="la-ball-triangle-path">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
+    <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
+    <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
+    <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
+</div>
+
+<div id="wrapper">
+
+    <header id="home" class="scrollto clearfix" data-enllax-ratio=".5">
+        <div id="header" class="nav-collapse">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <div id="logo">
+                        <img src="../images/logo.svg" id="banner-logo" alt="QuadroFleet Drone Control Logo"/>
+                        <img src="../images/logo.svg" id="navigation-logo" alt="QuadroFleet Drone Control Logo"/>
+                    </div>
+
+                    <aside>
+                        <ul class="social-icons">
+                            <li>
+                                <a target="_blank" title="GitHub" href="https://github.com/beep-systems/quadrofleet.github.io/wiki"
+                                   aria-label="Visit QuadroFleet GitHub">
+                                    <i class="fa fa-github fa-1x"></i><span>GitHub</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Discord" href="https://discord.gg/WCtTHMkHAK" aria-label="Join QuadroFleet Discord">
+                                    <img src="../images/discord.svg" alt="Discord Icon" class="icon discord-icon">
+                                    <span>Discord</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <nav id="nav-main">
+                        <ul>
+                            <li>
+                                <a href="/index.html#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#about">About</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#gallery">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#manual">Manual</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#faq">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#support">Support</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div id="nav-trigger" aria-label="Toggle Mobile Navigation"><span></span></div>
+                    <nav id="nav-mobile" aria-hidden="true"></nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="content">
+
+        <section id="important" class="introduction">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <div class="crossnote markdown-preview">
+
+                        <h2>Controlling the Drone Over the Internet </h2>
+
+                        <p>To control a drone over the internet, operator-side software is required.<br>
+                            The <strong>QuadroFleet</strong> project offers two options:</p>
+                        <ol>
+                            <li><strong>Desktop application</strong> (Windows, Linux, macOS)</li>
+                            <li><strong>Mobile application</strong> (Android)</li>
+                        </ol>
+                        <h2 id="installing-the-desktop-application">Installing the Desktop Application </h2>
+                        <p>The desktop application is developed in Java, making it cross-platform and compatible with all major operating systems.</p>
+                        <h3 id="download-links">Download links: </h3>
+                        <ul>
+                            <li><strong>Windows:</strong> <a href="https://quadrofleet.com/downloads/quadrofleet_windows.zip">quadrofleet_windows.zip</a></li>
+                            <li><strong>Linux:</strong> <em>Link will be added soon</em></li>
+                            <li><strong>macOS:</strong> <em>Link will be added soon</em></li>
+                        </ul>
+                        <h3 id="dependencies">Dependencies: </h3>
+                        <p>The application requires <strong>GStreamer</strong>, a multimedia framework used for video stream processing.</p>
+                        <p>Download the appropriate version:</p>
+                        <ul>
+                            <li><strong>Windows (MSVC 64-bit):</strong> <a href="https://gstreamer.freedesktop.org/download/#windows">GStreamer for Windows</a></li>
+                            <li><strong>Linux:</strong> <a href="https://gstreamer.freedesktop.org/download/#linux">GStreamer for Linux</a></li>
+                            <li><strong>macOS:</strong> <a href="https://gstreamer.freedesktop.org/download/#ios">GStreamer for macOS</a></li>
+                        </ul>
+                        <p>After installing both GStreamer and the QuadroFleet application, it should be ready to use.</p>
+                        <h2 id="installing-the-mobile-application">Installing the Mobile Application </h2>
+                        <p>The <strong>QuadroFleet</strong> mobile application is available for Android on Google Play:</p>
+                        <p><a href="https://play.google.com/store/apps/details?id=systems.beep.christof&amp;hl=en">Download from Google Play</a></p>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="landing-footer" class="clearfix">
+        <div class="row clearfix text-center">
+            <p id="copyright" class="col-1">Copyright © 2025 <a href="https://quadrofleet.com">QuadroFleet</a></p>
+        </div>
+    </footer>
+</div>
+
+<script src="../js/jquery.1.8.3.min.js"></script>
+<script src="../js/wow.min.js"></script>
+<script src="../js/featherlight.min.js"></script>
+<script src="../js/featherlight.gallery.min.js"></script>
+<script src="../js/jquery.enllax.min.js"></script>
+<script src="../js/jquery.scrollUp.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/jquery.stickyNavbar.min.js"></script>
+<script src="../js/jquery.waypoints.min.js"></script>
+<script src="../js/images-loaded.min.js"></script>
+<script src="../js/lightbox.min.js"></script>
+<script src="../js/site.js"></script>
+
+</body>
+</html>

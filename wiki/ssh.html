@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>QuadroFleet - Long-Range Drone Control Over 4G/5G</title>
+    <meta name="keywords"
+          content="QuadroFleet, drone, FPV, CRSF, Crossfire, 4G, 5G, low-latency, WireGuard, VPN, UDP, H.265, gamepad, XBOX, PlayStation, long-range drone, OpenIPC, drone control">
+    <meta name="description"
+          content="QuadroFleet enables low-latency drone control and FPV streaming over 4G/5G networks using the CRSF protocol. Control your drone with XBOX or PlayStation gamepads via a secure WireGuard VPN. Perfect for long-range operations with real-time telemetry and video.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/color.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link href="../css/animate.css" rel="stylesheet" type="text/css">
+    <link href="../css/md.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <meta property="og:title" content="QuadroFleet - Long-Range Drone Control Over 4G/5G">
+    <meta property="og:description"
+          content="Control drones over 4G/5G with low-latency FPV streaming and CRSF protocol. Secure, reliable, and easy to set up.">
+    <meta property="og:image" content="https://quadrofleet.com/images/logo.svg">
+    <meta property="og:url" content="https://quadrofleet.com">
+    <meta property="og:type" content="website">
+</head>
+<body>
+
+<div id="preloader">
+    <div id="status" class="la-ball-triangle-path">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
+    <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
+    <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
+    <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
+</div>
+
+<div id="wrapper">
+
+    <header id="home" class="scrollto clearfix" data-enllax-ratio=".5">
+        <div id="header" class="nav-collapse">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <div id="logo">
+                        <img src="../images/logo.svg" id="banner-logo" alt="QuadroFleet Drone Control Logo"/>
+                        <img src="../images/logo.svg" id="navigation-logo" alt="QuadroFleet Drone Control Logo"/>
+                    </div>
+
+                    <aside>
+                        <ul class="social-icons">
+                            <li>
+                                <a target="_blank" title="GitHub" href="https://github.com/beep-systems/quadrofleet.github.io/wiki"
+                                   aria-label="Visit QuadroFleet GitHub">
+                                    <i class="fa fa-github fa-1x"></i><span>GitHub</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Discord" href="https://discord.gg/WCtTHMkHAK" aria-label="Join QuadroFleet Discord">
+                                    <img src="../images/discord.svg" alt="Discord Icon" class="icon discord-icon">
+                                    <span>Discord</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <nav id="nav-main">
+                        <ul>
+                            <li>
+                                <a href="/index.html#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#about">About</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#gallery">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#manual">Manual</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#faq">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#support">Support</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div id="nav-trigger" aria-label="Toggle Mobile Navigation"><span></span></div>
+                    <nav id="nav-mobile" aria-hidden="true"></nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="content">
+
+        <section id="important" class="introduction">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <div class="crossnote markdown-preview">
+
+                        <h2>Using SSH</h2>
+
+                        <p>Connection to the camera via SSH or through the Web UI is done in the standard way, identical to a typical OpenIPC
+                            setup.<br>
+                            First, you'll need a network cable with an RJ45 connector, wired according to the following scheme:</p>
+                        <div align="center"><img src="https://quadrofleet.com/images/wiki/ssh/pic1.png" alt="Wiring" height="800px&quot;"></div>
+                        <p>Once the camera is connected to a router with DHCP enabled, it will automatically receive an IP address and become
+                            accessible like any other device on your local network.</p>
+                        <h3 id="frequently-asked-questions">Frequently Asked Questions </h3>
+                        <p><strong>Official OpenIPC FAQ:</strong><br>
+                            <a href="https://github.com/OpenIPC/wiki/blob/master/en/faq.md">https://github.com/OpenIPC/wiki/blob/master/en/faq.md</a>
+                        </p>
+                        <h3 id="how-do-i-sign-in-to-the-camera-via-ssh">How do I sign in to the camera via SSH? </h3>
+                        <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span
+                                class="token function">ssh</span> root@<span class="token operator">&lt;</span>camera_ip_address<span
+                                class="token operator">&gt;</span>
+</code></pre>
+                        <ul>
+                            <li><strong>Default password:</strong> <code>12345</code></li>
+                            <li><strong>or Quadrofleet build password:</strong> <code>quadrofleet</code></li>
+                        </ul>
+                        <h3 id="how-do-i-sign-in-to-the-camera-web-ui">How do I sign in to the camera Web UI? </h3>
+                        <p>Open your browser and go to:</p>
+                        <pre data-role="codeBlock" data-info="" class="language-text"><code>http://&lt;camera_ip_address&gt;
+</code></pre>
+                        <ul>
+                            <li><strong>Username:</strong> <code>root</code></li>
+                            <li><strong>Password:</strong> <code>12345</code> (default)</li>
+                        </ul>
+                        <p>You will be prompted to change your password after the first successful login.</p>
+                        <blockquote>
+                            <p><strong>Important:</strong> Changing the Web UI password will also change the SSH root password.</p>
+                        </blockquote>
+                        <h3 id="how-do-i-reset-the-password-for-ssh-or-web-ui">How do I reset the password for SSH or Web UI? </h3>
+                        <ol>
+                            <li>Create a serial connection to the camera using a UART adapter and a terminal program (e.g., <code>minicom</code>,
+                                <code>screen</code>, or <code>picocom</code>).
+                            </li>
+                            <li>Power on the camera and immediately press <strong>Ctrl-C</strong> to interrupt the boot process and access the U-Boot
+                                shell.
+                            </li>
+                            <li>Enter the following commands:</li>
+                        </ol>
+                        <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>sf probe <span class="token number">0</span>
+sf erase 0xd50000 0x2b0000
+reset
+</code></pre>
+                        <p>This erases the configuration partition, resetting passwords and Web UI settings to factory defaults.</p>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="landing-footer" class="clearfix">
+        <div class="row clearfix text-center">
+            <p id="copyright" class="col-1">Copyright © 2025 <a href="https://quadrofleet.com">QuadroFleet</a></p>
+        </div>
+    </footer>
+</div>
+
+<script src="../js/jquery.1.8.3.min.js"></script>
+<script src="../js/wow.min.js"></script>
+<script src="../js/featherlight.min.js"></script>
+<script src="../js/featherlight.gallery.min.js"></script>
+<script src="../js/jquery.enllax.min.js"></script>
+<script src="../js/jquery.scrollUp.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/jquery.stickyNavbar.min.js"></script>
+<script src="../js/jquery.waypoints.min.js"></script>
+<script src="../js/images-loaded.min.js"></script>
+<script src="../js/lightbox.min.js"></script>
+<script src="../js/site.js"></script>
+
+</body>
+</html>

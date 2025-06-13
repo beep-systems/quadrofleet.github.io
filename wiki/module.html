@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>QuadroFleet - Long-Range Drone Control Over 4G/5G</title>
+    <meta name="keywords"
+          content="QuadroFleet, drone, FPV, CRSF, Crossfire, 4G, 5G, low-latency, WireGuard, VPN, UDP, H.265, gamepad, XBOX, PlayStation, long-range drone, OpenIPC, drone control">
+    <meta name="description"
+          content="QuadroFleet enables low-latency drone control and FPV streaming over 4G/5G networks using the CRSF protocol. Control your drone with XBOX or PlayStation gamepads via a secure WireGuard VPN. Perfect for long-range operations with real-time telemetry and video.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/color.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link href="../css/animate.css" rel="stylesheet" type="text/css">
+    <link href="../css/md.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <meta property="og:title" content="QuadroFleet - Long-Range Drone Control Over 4G/5G">
+    <meta property="og:description"
+          content="Control drones over 4G/5G with low-latency FPV streaming and CRSF protocol. Secure, reliable, and easy to set up.">
+    <meta property="og:image" content="https://quadrofleet.com/images/logo.svg">
+    <meta property="og:url" content="https://quadrofleet.com">
+    <meta property="og:type" content="website">
+
+</head>
+<body>
+
+<div id="preloader">
+    <div id="status" class="la-ball-triangle-path">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
+    <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
+    <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
+    <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
+</div>
+
+<div id="wrapper">
+
+    <header id="home" class="scrollto clearfix" data-enllax-ratio=".5">
+        <div id="header" class="nav-collapse">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <div id="logo">
+                        <img src="../images/logo.svg" id="banner-logo" alt="QuadroFleet Drone Control Logo"/>
+                        <img src="../images/logo.svg" id="navigation-logo" alt="QuadroFleet Drone Control Logo"/>
+                    </div>
+
+                    <aside>
+                        <ul class="social-icons">
+                            <li>
+                                <a target="_blank" title="GitHub" href="https://github.com/beep-systems/quadrofleet.github.io/wiki"
+                                   aria-label="Visit QuadroFleet GitHub">
+                                    <i class="fa fa-github fa-1x"></i><span>GitHub</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Discord" href="https://discord.gg/WCtTHMkHAK" aria-label="Join QuadroFleet Discord">
+                                    <img src="../images/discord.svg" alt="Discord Icon" class="icon discord-icon">
+                                    <span>Discord</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <nav id="nav-main">
+                        <ul>
+                            <li>
+                                <a href="/index.html#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#about">About</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#gallery">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#manual">Manual</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#faq">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#support">Support</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div id="nav-trigger" aria-label="Toggle Mobile Navigation"><span></span></div>
+                    <nav id="nav-mobile" aria-hidden="true"></nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="content">
+
+        <section id="important" class="introduction">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <div class="crossnote markdown-preview">
+
+                        <h2>Module Assembly</h2>
+
+                        <p>This guide details the components and steps to assemble the QuadroFleet drone module. The system is designed for
+                            compatibility with off-the-shelf FPV drone parts, keeping costs low while ensuring performance.</p>
+                        <h3 id="bill-of-materials-bom">Bill of Materials (BOM) </h3>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Component</th>
+                                <th>Approx. Cost (€)</th>
+                                <th>Link</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><strong>Drone Frame &amp; Core</strong></td>
+                                <td>Mark4 7-inch frame</td>
+                                <td>16</td>
+                                <td><a href="https://aliexpress.com/item/1005007050005578.html">AliExpress</a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>iFlight XING E Pro 2207 1800KV 6S (4x)</td>
+                                <td>50</td>
+                                <td><a href="https://aliexpress.com/item/1005006356256645.html">AliExpress</a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>SpeedyBee F405 V4 FC + 55A ESC Stack</td>
+                                <td>80</td>
+                                <td><a href="https://aliexpress.com/item/1005006809684035.html">AliExpress</a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Gemfan Hurrikan MCK v2 (2 pairs)</td>
+                                <td>3</td>
+                                <td><a href="https://aliexpress.com/item/1005006741863428.html">AliExpress</a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>GEP-M10Q GPS (optional, recommended)</td>
+                                <td>25</td>
+                                <td><a href="https://aliexpress.com/item/1005004752373178.html">AliExpress</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Video System</strong></td>
+                                <td>SSC30KQ Camera + 1.7mm Lens (OpenIPC)</td>
+                                <td>27</td>
+                                <td><a href="https://de.aliexpress.com/item/1005006835439125.html">AliExpress</a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Quectel EC25 4G Modem</td>
+                                <td>40</td>
+                                <td><a href="https://de.aliexpress.com/item/1005002330780040.html">AliExpress</a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>4G FPC-Antenna Signal Booster</td>
+                                <td>2</td>
+                                <td><a href="https://de.aliexpress.com/item/1005004592746304.html">AliExpress</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Power System</strong></td>
+                                <td>DC-DC 12V-5V 3A Buck Converter</td>
+                                <td>2</td>
+                                <td><a href="https://de.aliexpress.com/item/1005002163078645.html">AliExpress</a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>3S/6S LiPo Battery Pack (3000–6000mAh)</td>
+                                <td>20–90</td>
+                                <td>Varies</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Miscellaneous</strong></td>
+                                <td>Wires, XT60/XT30 Connectors, Mounting Hardware</td>
+                                <td>~10</td>
+                                <td>Local/Varies</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Control</strong></td>
+                                <td>XBOX/PlayStation/FPV RC Controller (USB)</td>
+                                <td>Varies</td>
+                                <td>Local/Varies</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Connectivity</strong></td>
+                                <td>SIM Card with Mobile Data (4G/5G)</td>
+                                <td>Varies</td>
+                                <td>Local Provider</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Total Estimated Cost</strong>: €275–345 (excluding controller and SIM card)</p>
+                        <h3 id="assembly-steps">Assembly Steps </h3>
+                        <ol>
+                            <li>
+                                <p><strong>Frame and Core Setup</strong>:</p>
+                                <ul>
+                                    <li>Assemble the <strong>Mark4 7-inch frame</strong> per the manufacturer’s instructions.</li>
+                                    <li>Install the <strong>iFlight XING E Pro 2207 motors</strong> (4x) and secure them to the frame.</li>
+                                    <li>Mount the <strong>SpeedyBee F405 V4 FC + ESC stack</strong> centrally, ensuring access to UART ports.</li>
+                                    <li>Attach <strong>Gemfan Hurrikan MCK v2 propellers</strong> (check rotation direction: CW/CCW).</li>
+                                    <li>(Optional) Install the <strong>GEP-M10Q GPS</strong> module for enhanced tracking.</li>
+                                    <li>(Optional) Print cases for SSC30KQ and GPS module. STL files are available <a
+                                            href="http://quadrofleet.com/downloads/3dprint_stl.zip">here</a>.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><strong>Video and Connectivity</strong>:</p>
+                                <ul>
+                                    <li>Mount the <strong>SSC30KQ camera</strong> with a 1.7mm lens, ensuring a clear forward view.</li>
+                                    <li>Connect the camera to the flight controller’s UART port (e.g., UART2) for CRSF telemetry.</li>
+                                    <li>Install the <strong>Quectel EC25 4G modem</strong> and connect the <strong>4G FPC antenna</strong> for optimal
+                                        signal.
+                                    </li>
+                                    <li>Secure the <strong>DC-DC buck converter</strong> to step down battery voltage to 5V for the camera and modem.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><strong>Power System</strong>:</p>
+                                <ul>
+                                    <li>Connect the <strong>3S/6S battery</strong> to the ESC via an <strong>XT60 connector</strong>.</li>
+                                    <li>Wire the buck converter to power the camera and modem (5V, 3A output).</li>
+                                    <li>Ensure all connections are insulated to prevent shorts.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><strong>Wiring</strong>:</p>
+                                <ul>
+                                    <li>Use the diagram below for connections:
+                                        <ul>
+                                            <li><strong>Camera ↔ Flight Controller</strong>: UART (TX/RX) for CRSF protocol.</li>
+                                            <li><strong>Modem ↔ Camera</strong>: USB for data.</li>
+                                            <li><strong>Buck Converter</strong>: Battery → 12V input, 5V output to camera/modem.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Secure wires with zip ties to minimize vibration damage.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <div align="center"><img src="https://quadrofleet.com/images/wiki/module/pic1.png" alt="Wiring"></div>
+                        <ol start="5">
+                            <li><strong>Testing</strong>:
+                                <ul>
+                                    <li>Power on the drone and verify the flight controller boots correctly.</li>
+                                    <li>Check camera connectivity (or <a href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Firmware">flash</a>
+                                        it first) via the OpenIPC web interface (default IP via DHCP).
+                                    </li>
+                                    <li>Test modem connectivity by inserting a <strong>SIM card</strong> and confirming 4G/5G signal.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <h3 id="notes">Notes </h3>
+                        <ul>
+                            <li>Ensure all components are securely mounted to withstand vibrations.</li>
+                            <li>Use high-quality soldering for reliable connections.</li>
+                            <li>Verify battery capacity matches your flight duration needs.</li>
+                            <li>For detailed wiring, refer to the <a
+                                    href="https://www.speedybee.com/speedybee-f405-v4-bls-60a-30x30-fc-esc-stack/#Manual">SpeedyBee F405 manual</a>
+                                and <a href="https://openipc.org">OpenIPC documentation</a>.
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="landing-footer" class="clearfix">
+        <div class="row clearfix text-center">
+            <p id="copyright" class="col-1">Copyright © 2025 <a href="https://quadrofleet.com">QuadroFleet</a></p>
+        </div>
+    </footer>
+</div>
+
+<script src="../js/jquery.1.8.3.min.js"></script>
+<script src="../js/wow.min.js"></script>
+<script src="../js/featherlight.min.js"></script>
+<script src="../js/featherlight.gallery.min.js"></script>
+<script src="../js/jquery.enllax.min.js"></script>
+<script src="../js/jquery.scrollUp.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/jquery.stickyNavbar.min.js"></script>
+<script src="../js/jquery.waypoints.min.js"></script>
+<script src="../js/images-loaded.min.js"></script>
+<script src="../js/lightbox.min.js"></script>
+<script src="../js/site.js"></script>
+
+</body>
+</html>

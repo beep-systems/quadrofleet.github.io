@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>QuadroFleet - Long-Range Drone Control Over 4G/5G</title>
+    <meta name="keywords"
+          content="QuadroFleet, drone, FPV, CRSF, Crossfire, 4G, 5G, low-latency, WireGuard, VPN, UDP, H.265, gamepad, XBOX, PlayStation, long-range drone, OpenIPC, drone control">
+    <meta name="description"
+          content="QuadroFleet enables low-latency drone control and FPV streaming over 4G/5G networks using the CRSF protocol. Control your drone with XBOX or PlayStation gamepads via a secure WireGuard VPN. Perfect for long-range operations with real-time telemetry and video.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/color.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link href="../css/animate.css" rel="stylesheet" type="text/css">
+    <link href="../css/md.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <meta property="og:title" content="QuadroFleet - Long-Range Drone Control Over 4G/5G">
+    <meta property="og:description"
+          content="Control drones over 4G/5G with low-latency FPV streaming and CRSF protocol. Secure, reliable, and easy to set up.">
+    <meta property="og:image" content="https://quadrofleet.com/images/logo.svg">
+    <meta property="og:url" content="https://quadrofleet.com">
+    <meta property="og:type" content="website">
+</head>
+<body>
+
+<div id="preloader">
+    <div id="status" class="la-ball-triangle-path">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
+    <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
+    <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
+    <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
+</div>
+
+<div id="wrapper">
+
+    <header id="home" class="scrollto clearfix" data-enllax-ratio=".5">
+        <div id="header" class="nav-collapse">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <div id="logo">
+                        <img src="../images/logo.svg" id="banner-logo" alt="QuadroFleet Drone Control Logo"/>
+                        <img src="../images/logo.svg" id="navigation-logo" alt="QuadroFleet Drone Control Logo"/>
+                    </div>
+
+                    <aside>
+                        <ul class="social-icons">
+                            <li>
+                                <a target="_blank" title="GitHub" href="https://github.com/beep-systems/quadrofleet.github.io/wiki"
+                                   aria-label="Visit QuadroFleet GitHub">
+                                    <i class="fa fa-github fa-1x"></i><span>GitHub</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Discord" href="https://discord.gg/WCtTHMkHAK" aria-label="Join QuadroFleet Discord">
+                                    <img src="../images/discord.svg" alt="Discord Icon" class="icon discord-icon">
+                                    <span>Discord</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <nav id="nav-main">
+                        <ul>
+                            <li>
+                                <a href="/index.html#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#about">About</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#gallery">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#manual">Manual</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#faq">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="/index.html#support">Support</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div id="nav-trigger" aria-label="Toggle Mobile Navigation"><span></span></div>
+                    <nav id="nav-mobile" aria-hidden="true"></nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="content">
+
+        <section id="important" class="introduction">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <div class="crossnote markdown-preview">
+
+                        <h2>Update Settings</h2>
+
+                        <p>This guide covers configuring the OpenIPC camera and Masina client application for optimal QuadroFleet performance.</p>
+                        <h3 id="prerequisites">Prerequisites </h3>
+                        <ul>
+                            <li>A flashed OpenIPC camera with QuadroFleet firmware.</li>
+                            <li>A running WireGuard VPN server (see <a
+                                    href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Setting-Up-VPN">Setting Up VPN</a>).
+                            </li>
+                            <li>The QuadroFleet control application installed on a PC or smartphone.</li>
+                        </ul>
+                        <h3 id="step-1-openipc-camera-settings">Step 1: OpenIPC Camera Settings </h3>
+                        <ol>
+                            <li>
+                                <p>Access the camera’s web interface via its IP address (assigned via DHCP).</p>
+                            </li>
+                            <li>
+                                <p>Navigate to <strong>Extensions</strong> &gt; <strong>WireGuard</strong> and configure:</p>
+                                <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token assign-left variable">host</span><span
+                                        class="token operator">=</span><span class="token number">10.253</span>.0.3
+<span class="token assign-left variable">LOCAL_TIMEOUT</span><span class="token operator">=</span><span class="token number">300000</span>
+<span class="token assign-left variable">FAILSAFE_TIMEOUT</span><span class="token operator">=</span><span class="token number">10000</span>
+<span class="token assign-left variable">STABILIZE_TIMEOUT</span><span class="token operator">=</span><span class="token number">250</span>
+<span class="token assign-left variable">ELRS_SWITCH_PIN</span><span class="token operator">=</span><span class="token number">0</span>
+<span class="token assign-left variable">CONTROL_PORT</span><span class="token operator">=</span><span class="token number">2223</span>
+<span class="token assign-left variable">CAM_INFO_PORT</span><span class="token operator">=</span><span class="token number">2224</span>
+</code></pre>
+                                <ul>
+                                    <li><code>host</code>: IP of the operator device (e.g., PC/phone) in the VPN.</li>
+                                    <li><code>LOCAL_TIMEOUT</code>: Time (ms) before switching to ELRS mode (optional, set to 0 if unused).</li>
+                                    <li><code>FAILSAFE_TIMEOUT</code>: Time (ms) before entering failsafe mode (e.g., RTH).</li>
+                                    <li><code>STABILIZE_TIMEOUT</code>: Time (ms) before entering hover mode on connection loss.</li>
+                                    <li><code>ELRS_SWITCH_PIN</code>: GPIO pin for ELRS switch (0 if unused).</li>
+                                    <li><code>CONTROL_PORT</code>: remote UDP port for control commands.</li>
+                                    <li><code>CAM_INFO_PORT</code>: remote UDP port for camera telemetry.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Save and reboot the camera.</p>
+                            </li>
+                        </ol>
+                        <h3 id="step-2-video-stream-settings">Step 2: Video Stream Settings </h3>
+                        <ol>
+                            <li>In the web interface, go to <strong>Majestic</strong> &gt; <strong>Settings</strong>.</li>
+                            <li>Configure <strong>Video0</strong> settings:
+                                <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>Video codec: h265
+Video resolution: 960x720
+Video frame rate: <span class="token number">60</span>
+Video bitrate: <span class="token number">256</span> kbps
+</code></pre>
+                            </li>
+                            <li>Alternatively, use runtime settings:
+                                <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>FPS: <span class="token number">60</span>
+Bitrate: <span class="token number">256</span> kbps
+Video resolution: 960x720 <span class="token number">4</span>:3
+</code></pre>
+                            </li>
+                            <li>Apply changes and verify the video stream via the control application.</li>
+                            <li>Restart Majestic.</li>
+                        </ol>
+                        <h3 id="step-3-launch-the-control-application">Step 3: Launch the Control Application </h3>
+                        <ol>
+                            <li>Start the QuadroFleet application on your PC or smartphone.</li>
+                            <li>Ensure the VPN tunnel is active (see <a
+                                    href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Setting-Up-VPN">Setting Up VPN</a>).
+                            </li>
+                            <li>Verify the application receives video and telemetry:
+                                <ul>
+                                    <li>Check the OSD for battery, GPS, and speed data.</li>
+                                    <li>Confirm the interactive map displays the drone’s position.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <h3 id="notes">Notes </h3>
+                        <ul>
+                            <li>Lower bitrates (e.g., 256 kbps) reduce data usage but may impact video quality in poor network conditions.</li>
+                            <li>Test settings in a controlled environment before field deployment.</li>
+                            <li>Save a backup of the camera’s configuration file via the web interface.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="landing-footer" class="clearfix">
+        <div class="row clearfix text-center">
+            <p id="copyright" class="col-1">Copyright © 2025 <a href="https://quadrofleet.com">QuadroFleet</a></p>
+        </div>
+    </footer>
+</div>
+
+<script src="../js/jquery.1.8.3.min.js"></script>
+<script src="../js/wow.min.js"></script>
+<script src="../js/featherlight.min.js"></script>
+<script src="../js/featherlight.gallery.min.js"></script>
+<script src="../js/jquery.enllax.min.js"></script>
+<script src="../js/jquery.scrollUp.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/jquery.stickyNavbar.min.js"></script>
+<script src="../js/jquery.waypoints.min.js"></script>
+<script src="../js/images-loaded.min.js"></script>
+<script src="../js/lightbox.min.js"></script>
+<script src="../js/site.js"></script>
+
+</body>
+</html>
