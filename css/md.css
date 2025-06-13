@@ -188,17 +188,6 @@ pre[data-line] .line-highlight[data-end]:after {
     bottom: .4em
 }
 
-html body {
-    font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
-    overflow: initial;
-    box-sizing: border-box;
-    word-wrap: break-word
-}
-
 html body > :first-child {
     margin-top: 0
 }
@@ -291,7 +280,7 @@ html body > ol, html body > ul {
     margin-bottom: 16px
 }
 
-html body ol, html body ul {
+html body .crossnote ol, html body .crossnote ul {
     padding-left: 2em
 }
 
