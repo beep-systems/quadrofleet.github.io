@@ -57,7 +57,7 @@
                     <aside>
                         <ul class="social-icons">
                             <li>
-                                <a target="_blank" title="GitHub" href="https://github.com/beep-systems/quadrofleet.github.io/wiki"
+                                <a target="_blank" title="GitHub" href="https://github.com/beep-systems/quadrofleet-masina"
                                    aria-label="Visit QuadroFleet GitHub">
                                     <i class="fa fa-github fa-1x"></i><span>GitHub</span>
                                 </a>
@@ -117,14 +117,14 @@
                         <ul>
                             <li>A flashed OpenIPC camera with QuadroFleet firmware.</li>
                             <li>A running WireGuard VPN server (see <a
-                                    href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Setting-Up-VPN">Setting Up VPN</a>).
+                                    href="https://quadrofleet.com/wiki/vpn.html">Setting Up VPN</a>).
                             </li>
                             <li>The QuadroFleet control application installed on a PC or smartphone.</li>
                         </ul>
                         <h3 id="step-1-openipc-camera-settings">Step 1: OpenIPC Camera Settings </h3>
                         <ol>
                             <li>
-                                <p>Access the camera’s web interface via its IP address (assigned via DHCP).</p>
+                                <p>Access the camera’s web interface via its IP address (<code>http://10.253.0.2/</code> if VPN is configured).</p>
                             </li>
                             <li>
                                 <p>Navigate to <strong>Extensions</strong> &gt; <strong>WireGuard</strong> and configure:</p>
@@ -143,7 +143,7 @@
                                     <li><code>FAILSAFE_TIMEOUT</code>: Time (ms) before entering failsafe mode (e.g., RTH).</li>
                                     <li><code>STABILIZE_TIMEOUT</code>: Time (ms) before entering hover mode on connection loss.</li>
                                     <li><code>ELRS_SWITCH_PIN</code>: GPIO pin for ELRS switch (0 if unused).</li>
-                                    <li><code>CONTROL_PORT</code>: remote UDP port for control commands.</li>
+                                    <li><code>CONTROL_PORT</code>: <strong>remote and local</strong> UDP port for control commands.</li>
                                     <li><code>CAM_INFO_PORT</code>: remote UDP port for camera telemetry.</li>
                                 </ul>
                             </li>

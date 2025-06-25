@@ -57,7 +57,7 @@
                     <aside>
                         <ul class="social-icons">
                             <li>
-                                <a target="_blank" title="GitHub" href="https://github.com/beep-systems/quadrofleet.github.io/wiki"
+                                <a target="_blank" title="GitHub" href="https://github.com/beep-systems/quadrofleet-masina"
                                    aria-label="Visit QuadroFleet GitHub">
                                     <i class="fa fa-github fa-1x"></i><span>GitHub</span>
                                 </a>
@@ -224,6 +224,7 @@ Endpoint <span class="token operator">=</span> <span class="token operator">&lt;
 PersistentKeepalive <span class="token operator">=</span> <span class="token number">25</span>
 </code></pre>
                                 <ul>
+                                    <li>Replace <code>PrivateKey</code> and <code>PublicKey</code> values.</li>
                                     <li>Replace <code>&lt;VPS_PUBLIC_IP&gt;</code> with your VPS’s public IP address.</li>
                                 </ul>
                             </li>
@@ -251,6 +252,10 @@ AllowedIPs <span class="token operator">=</span> <span class="token number">10.2
 Endpoint <span class="token operator">=</span> <span class="token operator">&lt;</span>VPS_PUBLIC_IP<span class="token operator">&gt;</span>:51820
 PersistentKeepalive <span class="token operator">=</span> <span class="token number">25</span>
 </code></pre>
+                                <ul>
+                                    <li>Replace <code>PrivateKey</code> and <code>PublicKey</code> values.</li>
+                                    <li>Replace <code>&lt;VPS_PUBLIC_IP&gt;</code> with your VPS’s public IP address.</li>
+                                </ul>
                             </li>
                             <li>Update the network interface configuration:
                                 <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>auto wg0
@@ -270,15 +275,16 @@ iface wg0 inet static
                         <ul>
                             <li>Ping the drone’s VPN IP (<code>10.253.0.2</code>) from the operator device (<code>10.253.0.3</code>).</li>
                             <li>Ensure the camera’s web interface is accessible over the VPN.</li>
-                            <li>Test UDP communication using the QuadroFleet application.</li>
+                            <li>Test UDP communication using the QuadroFleet desktop or mobile application.</li>
                         </ul>
                         <h3 id="notes">Notes </h3>
                         <ul>
                             <li>Use a VPS with low-latency connectivity (e.g., AWS, DigitalOcean or <a href="https://www.ionos.com/">IONOS</a> VPS for
                                 1$/mo) for optimal performance.
                             </li>
-                            <li>Ensure the SIM card has sufficient data and supports 4G/5G in your area.</li>
+                            <li>Installing a VPN Server on the local PC will reduce latency, but it means more configuration difficulties.</li>
                             <li>If using a local PC as the VPN server, configure port forwarding (51820/UDP) on your router.</li>
+                            <li>Ensure the SIM card has sufficient data and supports 4G/5G in your area.</li>
                         </ul>
 
                     </div>

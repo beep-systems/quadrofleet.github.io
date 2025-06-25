@@ -58,7 +58,7 @@
                     <aside>
                         <ul class="social-icons">
                             <li>
-                                <a target="_blank" title="GitHub" href="https://github.com/beep-systems/quadrofleet.github.io/wiki"
+                                <a target="_blank" title="GitHub" href="https://github.com/beep-systems/quadrofleet-masina"
                                    aria-label="Visit QuadroFleet GitHub">
                                     <i class="fa fa-github fa-1x"></i><span>GitHub</span>
                                 </a>
@@ -206,7 +206,9 @@
                             </tr>
                             </tbody>
                         </table>
-                        <p><strong>Total Estimated Cost</strong>: €275–345 (excluding controller and SIM card)</p>
+                        <p><strong>Total Estimated Cost</strong>: €275–345 (excluding controller and SIM card).</p>
+                        <p><strong>Dead links: </strong>: if links to components are no longer available, try to find new ones by name.</p>
+                        <p><strong>5G modems</strong>: 5G modems can also be used, but at the moment they are much more expensive than 4G.</p>
                         <h3 id="assembly-steps">Assembly Steps </h3>
                         <ol>
                             <li>
@@ -215,7 +217,6 @@
                                     <li>Assemble the <strong>Mark4 7-inch frame</strong> per the manufacturer’s instructions.</li>
                                     <li>Install the <strong>iFlight XING E Pro 2207 motors</strong> (4x) and secure them to the frame.</li>
                                     <li>Mount the <strong>SpeedyBee F405 V4 FC + ESC stack</strong> centrally, ensuring access to UART ports.</li>
-                                    <li>Attach <strong>Gemfan Hurrikan MCK v2 propellers</strong> (check rotation direction: CW/CCW).</li>
                                     <li>(Optional) Install the <strong>GEP-M10Q GPS</strong> module for enhanced tracking.</li>
                                     <li>(Optional) Print cases for SSC30KQ and GPS module. STL files are available <a
                                             href="http://quadrofleet.com/downloads/3dprint_stl.zip">here</a>.
@@ -227,10 +228,10 @@
                                 <ul>
                                     <li>Mount the <strong>SSC30KQ camera</strong> with a 1.7mm lens, ensuring a clear forward view.</li>
                                     <li>Connect the camera to the flight controller’s UART port (e.g., UART2) for CRSF telemetry.</li>
+                                    <li>Secure the <strong>DC-DC buck converter</strong> to step down battery voltage to 5V for the camera and modem.
                                     <li>Install the <strong>Quectel EC25 4G modem</strong> and connect the <strong>4G FPC antenna</strong> for optimal
                                         signal.
                                     </li>
-                                    <li>Secure the <strong>DC-DC buck converter</strong> to step down battery voltage to 5V for the camera and modem.
                                     </li>
                                 </ul>
                             </li>
@@ -249,7 +250,7 @@
                                         <ul>
                                             <li><strong>Camera ↔ Flight Controller</strong>: UART (TX/RX) for CRSF protocol.</li>
                                             <li><strong>Modem ↔ Camera</strong>: USB for data.</li>
-                                            <li><strong>Buck Converter</strong>: Battery → 12V input, 5V output to camera/modem.</li>
+                                            <li><strong>Buck Converter</strong>: Battery → 12V input, 5V output to modem.</li>
                                         </ul>
                                     </li>
                                     <li>Secure wires with zip ties to minimize vibration damage.</li>
@@ -261,10 +262,11 @@
                             <li><strong>Testing</strong>:
                                 <ul>
                                     <li>Power on the drone and verify the flight controller boots correctly.</li>
-                                    <li>Check camera connectivity (or <a href="https://github.com/beep-systems/quadrofleet.github.io/wiki/Firmware">flash</a>
+                                    <li>Check camera connectivity (or <a href="https://quadrofleet.com/wiki/firmware.html">flash</a>
                                         it first) via the OpenIPC web interface (default IP via DHCP).
                                     </li>
                                     <li>Test modem connectivity by inserting a <strong>SIM card</strong> and confirming 4G/5G signal.</li>
+                                    <li>Attach <strong>Gemfan Hurrikan MCK v2 propellers</strong> (check rotation direction: CW/CCW).</li>
                                 </ul>
                             </li>
                         </ol>
