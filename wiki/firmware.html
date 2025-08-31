@@ -113,7 +113,7 @@
                         <h2>Preparing and Flashing OpenIPC Firmware</h2>
 
                         <p>This guide explains how to compile and flash the OpenIPC firmware with QuadroFleet’s Masina client for the drone’s camera
-                            (e.g., SSC30KQ, SSC338Q). It also covers configuring the 4G modem’s RNDIS interface.</p>
+                            (e.g., SSC30KQ, SSC338Q). It also covers configuring the 4G modem’s ECM interface.</p>
                         <h3 id="prerequisites">Prerequisites </h3>
                         <ul>
                             <li>A Linux system (Ubuntu 22.04+ recommended).</li>
@@ -240,7 +240,7 @@ sysupgrade <span class="token parameter variable">--kernel</span><span class="to
                             </li>
                         </ol>
                         <h3 id="step-5-configure-the-4g-modem-quectel-ec25">Step 5: Configure the 4G Modem (Quectel EC25) </h3>
-                        <p>Preparing the EC25-EU Modem (activating Ethernet (RNDIS) interface).</p>
+                        <p>Preparing the EC25-EU Modem (activating Ethernet (ECM) interface).</p>
                         <ol>
                             <li>Connect the modem to a PC via USB.</li>
                             <li>Open a terminal (e.g., PuTTY) with settings:
@@ -251,7 +251,7 @@ Parity: None
 Flow control: None
 </code></pre>
                             </li>
-                            <li>Enable the RNDIS interface:
+                            <li>Enable the ECM interface:
                                 <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>AT+QCFG<span
                                         class="token operator">=</span><span class="token string">"usbnet"</span>,1
 AT+CFUN<span class="token operator">=</span><span class="token number">1,1</span>
