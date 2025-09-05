@@ -147,7 +147,7 @@
 </code></pre>
                             </li>
                             <li>Copy Masina client files to the OpenIPC firmware directory:
-                                <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token function">cd ..</span>
+                                <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token function">cd ../..</span>
 <span class="token function">cp</span> <span class="token parameter variable">-r</span> quadrofleet-masina/client/drop/* firmware/</code></pre>
                             </li>
                             <li>Build the firmware:
@@ -160,6 +160,16 @@
                             <li>Find the output files in <code>firmware/output/images</code> (e.g., <code>rootfs.squashfs.ssc30kq</code>, <code>uImage.ssc30kq</code>).
                             </li>
                         </ol>
+                        <p>Precompiled firmware for SSC30KQ:</p>
+                        <ul>
+                            <li><a href="/downloads/firmware/rootfs.squashfs.ssc30kq">rootfs.squashfs.ssc30kq</a></li>
+                            <li><a href="/downloads/firmware/uImage.ssc30kq">uImage.ssc30kq</a></li>
+                        </ul>
+                        <p>Precompiled firmware for SSC338Q:</p>
+                        <ul>
+                            <li><a href="/downloads/firmware/rootfs.squashfs.ssc338q">rootfs.squashfs.ssc338q</a></li>
+                            <li><a href="/downloads/firmware/uImage.ssc338q">uImage.ssc338q</a></li>
+                        </ul>
                         <h3 id="step-2-flash-firmware-via-tftp">Step 2: Flash Firmware via TFTP </h3>
                         <p>Since the image files are slightly non-standard in size for OpenIPC, you must manually specify the block sizes for kernel and rootfs.
                             Size of images (<code>0x1fdd68</code> or <code>0x8ea000</code>) may be different, <code>192.168.178.66</code> is IP of
